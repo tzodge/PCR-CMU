@@ -1,4 +1,4 @@
-# CMU 3DV Source Code for RPMNet Experiments
+# PCR-CMU Source Code for RPMNet Experiments
 
 ## Contents
 pretrained: Pretrained models for all the RPMNet experiments mentioned in the paper.
