@@ -676,7 +676,7 @@ def main():
 	parser.add_argument('--model', type=str, default='dcp', metavar='N',
 						choices=['dcp'],
 						help='Model to use, [dcp]')
-	parser.add_argument('--emb_nn', type=str, default='pointnet', metavar='N',
+	parser.add_argument('--emb_nn', type=str, default='dgcnn', metavar='N',
 						choices=['pointnet', 'dgcnn'],
 						help='Embedding nn to use, [pointnet, dgcnn]')
 	parser.add_argument('--pointer', type=str, default='transformer', metavar='N',
