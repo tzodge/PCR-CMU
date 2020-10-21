@@ -6,38 +6,49 @@
 </p>
 
 
-## Contents
-pretrained: Pretrained models for all the RPMNet experiments mentioned in the paper.
-
-src: Source Code
-
-requirements.txt: Libraries Required
-
 ## Before Training
 
 `pip3 install -r requirements.txt`
 
 `cd src/`
 
-## Training Commands
+## Training
+
+Arguments:
+
+`--num_points`: Number of points to sample.
+
+`--loss_method`: The loss type to train the model. Use `corrloss` for correspondence loss and use `rpmloss` for default loss function mentioned in RPMNet paper.
+
+`--noise_type`: Type of noise & sampling in point clouds. `clean` refers to no noise & identical sampling. `partial_identical` refers to partial source & identical sampling.
+
+`--partial`: `num_points*partial` points will be kept in the source. Only required if `--noise_type=partial_identical`
+
+`--rot_mag`: Maximum initial misalignment (in deg)
+
+`--name`: Name of the experiment
+
 ### exp 2.1
-`python train.py --loss_method corrloss --noise_type clean --rot_mag 180 --train_batch_size 4 --lr 1e-3 --val_batch_size 4 --gpu 0 --name corrloss_clean_180deg`
+`python train.py --num_points 1024 --loss_method corrloss --noise_type clean --rot_mag 180 --name corrloss_clean_180deg`
 
 ### exp 2.2
-`python train.py --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 180 --train_batch_size 4 --lr 1e-3 --val_batch_size 4 --gpu 0 --name corrloss_partial_180deg`
+`python train.py --num_points 1024 --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 180 --name corrloss_partial_180deg`
 
 ### exp 2.3
-`python train.py --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 45 --train_batch_size 4 --lr 1e-3 --val_batch_size 4 --gpu 0 --name corrloss_partial_45deg`
+`python train.py --num_points 1024 --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 45 --name corrloss_partial_45deg`
 
 ### NOTE: 
 Use `--loss_method=rpmloss` to train with transformation loss as mentioned in the RPMNet paper.
 
-## Evaluation Commands
+## Evaluation
+
+`--resume`: Path to the pretrained model to evaluate
+
 ### exp 2.1
-`python eval.py --noise_type clean --rot_mag 180 --gpu 0 --val_batch_size 4 --resume ../pretrained/full_180_corrloss_best.pth`
+`python eval.py --noise_type clean --rot_mag 180 --resume ../pretrained/full_180_corrloss_best.pth`
 
 ### exp 2.2
-`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 180 --gpu 0 --val_batch_size 4 --resume ../pretrained/partial_180_corrloss_best.pth`
+`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 180 --resume ../pretrained/partial_180_corrloss_best.pth`
 
 ### exp 2.3
-`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --gpu 0 --val_batch_size 4 --resume ../pretrained/partial_45_corrloss_best.pth`
+`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --resume ../pretrained/partial_45_corrloss_best.pth`
