@@ -28,13 +28,13 @@ Arguments:
 
 `--name`: Name of the experiment
 
-### exp 2.1
+### Experiment 2.1
 `python train.py --num_points 1024 --loss_method corrloss --noise_type clean --rot_mag 180 --name corrloss_clean_180deg`
 
-### exp 2.2
+### Experiment 2.2
 `python train.py --num_points 1024 --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 180 --name corrloss_partial_180deg`
 
-### exp 2.3
+### Experiment 2.3
 `python train.py --num_points 1024 --loss_method corrloss --noise_type partial_identical --partial 0.7 --rot_mag 45 --name corrloss_partial_45deg`
 
 ### NOTE: 
@@ -44,11 +44,11 @@ Use `--loss_method=rpmloss` to train with transformation loss as mentioned in th
 
 `--resume`: Path to the pretrained model to evaluate
 
-### exp 2.1
+### Experiment 2.1
 `python eval.py --noise_type clean --rot_mag 180 --resume ../pretrained/full_180_corrloss_best.pth`
 
-### exp 2.2
+### Experiment 2.2
 `python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 180 --resume ../pretrained/partial_180_corrloss_best.pth`
 
-### exp 2.3
+### Experiment 2.3
 `python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --resume ../pretrained/partial_45_corrloss_best.pth`
