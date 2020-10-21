@@ -1,5 +1,11 @@
 # PCR-CMU Source Code for RPMNet Experiments
 
+## Network Architecture for PCRNet Experiments:
+<p align="center">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/RPMNet_Code/images/RPMNet_arch_v3.png" height="300">
+</p>
+
+
 ## Contents
 pretrained: Pretrained models for all the RPMNet experiments mentioned in the paper.
 
