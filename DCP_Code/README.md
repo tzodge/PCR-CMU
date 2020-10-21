@@ -17,13 +17,13 @@ Arguments:
 
 `--num_points`: Number of points in the source and target point clouds (except for the partial case)
 
-`--factor`: initial misalignment will be pi / factor
+`--factor`: Initial misalignment will be pi / factor
 
-`--loss`: loss function to use. Use `cross_entropy_corr` to train with correspondence loss and `mse_transf` to train with transformation loss
+`--loss`: Loss function to use. Use `cross_entropy_corr` to train with correspondence loss and `mse_transf` to train with transformation loss
 
-`--partial`: num_points*partial will be removed from the source
+`--partial`: `num_points*partial` will be removed from the source
 
-`--cut_plane`: if True, the sampled points in the partial point cloud lie on one side of a random plane. If False, they are sampled randomly
+`--cut_plane`: If True, the sampled points in the partial point cloud lie on one side of a random plane. If False, they are sampled randomly
 
 ### Exp 1.1
 `python main.py --exp_name=exp1_1 --num_points=512 --factor=1 --loss=cross_entropy_corr`
