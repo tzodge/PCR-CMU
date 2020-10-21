@@ -7,6 +7,12 @@ src: Source Code
 
 requirements.txt: Libraries Required
 
+## Before Training
+
+`pip3 install -r requirements.txt`
+
+`cd src/`
+
 ## Training Commands
 ### exp 2.1
 `python train.py --loss_method corrloss --noise_type clean --rot_mag 180 --train_batch_size 4 --lr 1e-3 --val_batch_size 4 --gpu 0 --name corrloss_clean_180deg`
