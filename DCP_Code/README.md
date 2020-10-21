@@ -2,7 +2,7 @@
 
 ## Network Architecture for DCP Experiments:
 <p align="center">
-	<img src="https://github.com/tzodge/PCR-CMU/blob/main/RPMNet_Code/images/DCP_arch_v2.png" height="400">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/DCP_Code/images/DCP_arch_v2.png" height="400">
 </p>
 
 ## Before Training
