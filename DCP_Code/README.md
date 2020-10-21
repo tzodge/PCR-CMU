@@ -11,12 +11,23 @@
 
 ## Training
 
+Arguments:
+
+`--num_points`
+
+`--factor`
+
+`--loss`
+
+
+
+
 ### Exp 1.1
-`python main.py --exp_name=exp1_1 --num_points=512 --factor=1 --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd  --batch_size=16`
+`python main.py --exp_name=exp1_1 --num_points=512 --factor=1 --loss=cross_entropy_corr --emb_nn=dgcnn --pointer=transformer --head=svd`
 
 ### Exp 1.2
 
-`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --partial=0.3 --cut_plane --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd  --batch_size=16`
+`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --partial=0.3 --cut_plane --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd`
 
 where 
 
@@ -26,7 +37,7 @@ where
 
 ### Exp 1.3
 
-`python main.py --exp_name=exp1_3 --num_points=512 --factor=4 --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd  --batch_size=16`
+`python main.py --exp_name=exp1_3 --num_points=512 --factor=4 --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd`
 
 To train models with transformation loss, use `--loss=mse_transf` instead.
 
