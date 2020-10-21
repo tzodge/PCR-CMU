@@ -13,36 +13,33 @@
 
 Arguments:
 
-`--num_points`
+`--exp_name`: Name of the experiment
 
-`--factor`
+`--num_points`: Number of points in the source and target point clouds (except for the partial case)
 
-`--loss`
+`--factor`: initial misalignment will be `pi / factor`
 
+`--loss`: loss function to use. Use `cross_entropy_corr` to train with correspondence loss and `mse_transf` to train with transformation loss
 
+`--partial`: num_points*partial will be removed from the source
 
+`--cut_plane`: if True, the sampled points in the partial point cloud lie on one side of a random plane. If False, they are sampled randomly
 
 ### Exp 1.1
-`python main.py --exp_name=exp1_1 --num_points=512 --factor=1 --loss=cross_entropy_corr --emb_nn=dgcnn --pointer=transformer --head=svd`
+`python main.py --exp_name=exp1_1 --num_points=512 --factor=1 --loss=cross_entropy_corr`
 
 ### Exp 1.2
 
-`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --partial=0.3 --cut_plane --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd`
-
-where 
-
-`--partial`: num_points*partial will be removed.
-
-`--cut_plane`: if True, the sampled points in the partial point cloud lie on one side of a random plane. If False, they are sampled randomly.
+`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --loss=cross_entropy_corr --partial=0.3 --cut_plane`
 
 ### Exp 1.3
 
-`python main.py --exp_name=exp1_3 --num_points=512 --factor=4 --loss=cross_entropy_corr --model=dcp --emb_nn=dgcnn --pointer=transformer --head=svd`
+`python main.py --exp_name=exp1_3 --num_points=512 --factor=4 --loss=cross_entropy_corr`
 
 To train models with transformation loss, use `--loss=mse_transf` instead.
 
 ## Evaluation
 
-Add `--eval` argument to the above commands to evaluate a model.
+`--eval`: Add this argument to the above commands to evaluate a model.
 
-Pass the appropriate `--model_path`.
+`--model_path`: Path to the pretrained model to be evaluated.
