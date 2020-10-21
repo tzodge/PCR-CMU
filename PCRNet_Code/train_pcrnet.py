@@ -22,6 +22,7 @@ if BASE_DIR[-8:] == 'examples':
 from model import PointNet
 from model import iPCRNet
 from losses import ChamferDistanceLoss
+from losses import FrobeniusNormLoss
 from data import ModelNet40
 
 def _init_(args):
@@ -34,6 +35,16 @@ def _init_(args):
 	os.system('cp main.py checkpoints' + '/' + args.exp_name + '/' + 'main.py.backup')
 	os.system('cp model.py checkpoints' + '/' + args.exp_name + '/' + 'model.py.backup')
 
+def create_transformation(rotation, translation):
+	# rotation: 	[Bx3x3]
+	# translation:  [Bx3x1]
+	
+	B = rotation.shape[0]
+	last_row = torch.zeros(B, 1, 4)
+	last_row[:, :, 3] = 1
+	T = torch.cat([rotation, translation], axis=2)
+	T = torch.cat([T, last_row], axis=1)
+	return T.to(rotation.device)
 
 class IOStream:
 	def __init__(self, path):
@@ -77,6 +88,8 @@ def test_one_epoch(device, model, test_loader):
 		output = model(template, source)
 
 		# source = rotation_ab_pred*template + translation_ab_pred
+		rotation_ba_pred = output['est_R']
+		translation_ba_pred = output['est_t']
 		rotation_ab_pred = output['est_R'].permute(0, 2, 1)
 		translation_ab_pred = -torch.bmm(output['est_R'].permute(0, 2, 1), output['est_t'].permute(0, 2, 1)).permute(0, 2, 1)		# -R^T * t
 
@@ -86,7 +99,12 @@ def test_one_epoch(device, model, test_loader):
 		translations_ab_pred.append(translation_ab_pred.view(-1, 3).detach().cpu().numpy())
 		eulers_ab.append(euler_ab.numpy())
 
-		loss_val = ChamferDistanceLoss()(template, output['transformed_source'])
+		try:
+			loss_val = ChamferDistanceLoss()(template, output['transformed_source'])
+		except:
+			igt = create_transformation(rotation_ab, translation_ab)
+			predicted = create_transformation(rotation_ba_pred, translation_ba_pred)
+			loss_val = FrobeniusNormLoss()(predicted, igt)
 
 		test_loss += loss_val.item()
 		count += 1
@@ -301,7 +319,7 @@ def options():
 						metavar='N', help='points in point-cloud (default: 1024)')
 	parser.add_argument('--gaussian_noise', default=False, type=bool)
 	parser.add_argument('--unseen', default=False, type=bool)
-	parser.add_argument('--factor', default=1, type=int)
+	parser.add_argument('--factor', default=4, type=int)
 
 	# settings for PointNet
 	parser.add_argument('--pointnet', default='tune', type=str, choices=['fixed', 'tune'],
