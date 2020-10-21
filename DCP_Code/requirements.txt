@@ -1,0 +1,6 @@
+torch==1.4.0
+h5py==2.9.0
+tensorboardX==2.0
+tqdm==4.31.1
+scipy==1.4.1
+numpy==1.17.4
