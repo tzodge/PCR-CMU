@@ -17,7 +17,7 @@ Arguments:
 
 `--num_points`: Number of points in the source and target point clouds (except for the partial case)
 
-`--factor`: initial misalignment will be `pi / factor`
+`--factor`: initial misalignment will be pi / factor
 
 `--loss`: loss function to use. Use `cross_entropy_corr` to train with correspondence loss and `mse_transf` to train with transformation loss
 
