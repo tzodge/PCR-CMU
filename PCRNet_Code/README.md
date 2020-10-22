@@ -5,13 +5,15 @@
 	<img src="https://github.com/tzodge/PCR-CMU/blob/main/PCRNet_Code/images/PCRNet_arch_v2.png" height="300">
 </p>
 
+## Before training:
+> pip3 install -r requirements.txt
+
 ## Training:
+Arguments:
 1. factor: Used to indicate initial misalignment range [-180/factor, 180/factor]
 2. num_points: Number of points in template and source point clouds.
 3. exp_name: Name of the log file created during training.
 
-### Before training:
-> pip3 install -r requirements.txt
 
 ### Section 6.3, Experiment 3.1:
 Points in Source: 1024, Points in Template: 1024 and Initial Misalignment Range: [-45, 45] degrees.
@@ -36,6 +38,7 @@ Points in Source: 100, Points in Template: 100 and Initial Misalignment Range: [
 
 
 ## Evaluation:
+Arguments:
 1. eval: Set this argument as True to evaluate the pretrained model.
 2. pretrained: Provide the complete path of the trained model.
 
