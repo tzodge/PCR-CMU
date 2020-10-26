@@ -11,15 +11,15 @@ We show that an existing deep learning based method which trains the network to 
 
 This is demonstrated by comparing methods like DCP, PCRNet, and RPMNet with their respective versions DCP_corr, PCRNet_corr, and RPMNet_corr.
 
-| ![Image](/images/DCP_charts.png) | 
+| # DCP Vs DCP_corr | 
 |:--:| 
-| DCP Vs DCP_corr | 
+| ![Image](/images/DCP_charts.png) | 
 
+| # PCRNet Vs PCRNet_corr | 
 | ![Image](/images/PCRNet_charts.png) | 
 |:--:| 
-| PCRNet Vs PCRNet_corr | 
 
-| ![Image](/images/RPMNet_charts.png) | 
+| # RPMNet Vs RPMNet_corr | 
 |:--:| 
-| RPMNet Vs RPMNet_corr | 
+| ![Image](/images/RPMNet_charts.png) | 
 
