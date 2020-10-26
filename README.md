@@ -9,17 +9,17 @@ This work is based on our observation that correspondence is more robust paramet
 
 We show that an existing deep learning based method which trains the network to learn transformations can converge faster, can register more accurately, and can deal with partial point cloudsif trained to learn correspondence.
 
-This is demonstrated by comparing methods like DCP, PCRNet, and RPMNet with their respective versions DCP_corr, PCRNet_corr, and RPMNet_corr.
+This is demonstrated by comparing methods (Trained to learn transformation) like DCP, PCRNet, and RPMNet with method_corr (Trained to learn correspondence) DCP_corr, PCRNet_corr, and RPMNet_corr respectively.
 
-|# DCP Vs DCP_corr | 
+| DCP Vs DCP_corr | 
 |:--:| 
 | ![Image](/images/DCP_charts.png) | 
 
-|# PCRNet Vs PCRNet_corr | 
+| PCRNet Vs PCRNet_corr | 
 |:--:| 
 | ![Image](/images/PCRNet_charts.png) | 
 
-|# RPMNet Vs RPMNet_corr | 
+| RPMNet Vs RPMNet_corr | 
 |:--:| 
 | ![Image](/images/RPMNet_charts.png) | 
 
