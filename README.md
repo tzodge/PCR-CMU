@@ -5,9 +5,9 @@
 |:--:| 
 | Correspondence Vs Transformation | -->
 
-This work is based on our observation that correspondence is more robust parameter for point cloud registration than transformation parameters. 
+This work is based on our observation that correspondence is more robust parameter for point cloud registration than transformations. 
 
-We show that an existing deep learning based method which trains the network to learn transformations can converge faster, can register more accurately, and can deal with partial point cloudsif trained to learn correspondence.
+We show that an existing deep learning based method which trains the network to learn transformations can converge faster, can register more accurately, and can register partial point clouds if trained to learn correspondence.
 
 This is demonstrated by comparing methods (Trained to learn transformation) like DCP, PCRNet, and RPMNet with method_corr (Trained to learn correspondence) DCP_corr, PCRNet_corr, and RPMNet_corr respectively.
 
