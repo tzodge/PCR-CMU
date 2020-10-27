@@ -190,14 +190,17 @@ def test_one_epoch(args, net, test_loader):
 		correct_pred_idx=torch.where(gt_idx-pred_idx ==0) 
 		total_correct_pred += len(correct_pred_idx[0])
 
+		try:
+			mse_ab +=  torch.mean((transformed_src - target) ** 2, dim=[0, 1, 2]).item() * batch_size
+			mae_ab += torch.mean(torch.abs(transformed_src - target), dim=[0, 1, 2]).item() * batch_size
 
-		mse_ab +=  torch.mean((transformed_src - target) ** 2, dim=[0, 1, 2]).item() * batch_size
-		mae_ab += torch.mean(torch.abs(transformed_src - target), dim=[0, 1, 2]).item() * batch_size
-
-		mse_ba += torch.mean((transformed_target - src) ** 2, dim=[0, 1, 2]).item() * batch_size
-		mae_ba += torch.mean(torch.abs(transformed_target - src), dim=[0, 1, 2]).item() * batch_size
-
-
+			mse_ba += torch.mean((transformed_target - src) ** 2, dim=[0, 1, 2]).item() * batch_size
+			mae_ba += torch.mean(torch.abs(transformed_target - src), dim=[0, 1, 2]).item() * batch_size
+		except: # in partial point cloud case
+			mse_ab += 0
+			mae_ab += 0
+			mse_ba += 0
+			mae_ba += 0
 
 		if args.debug:            
 			corr_mat_ab_pred_np = torch.clone(corr_mat_ab_pred).detach().cpu().numpy()         
@@ -359,12 +362,17 @@ def train_one_epoch(args, net, train_loader, opt):
 		if args.cycle:
 			total_cycle_loss = total_cycle_loss + cycle_loss.item() * 0.1 * batch_size
 
-		mse_ab +=  torch.mean((transformed_src - target) ** 2, dim=[0, 1, 2]).item() * batch_size
-		mae_ab += torch.mean(torch.abs(transformed_src - target), dim=[0, 1, 2]).item() * batch_size
+		try:
+			mse_ab +=  torch.mean((transformed_src - target) ** 2, dim=[0, 1, 2]).item() * batch_size
+			mae_ab += torch.mean(torch.abs(transformed_src - target), dim=[0, 1, 2]).item() * batch_size
 
-		mse_ba += torch.mean((transformed_target - src) ** 2, dim=[0, 1, 2]).item() * batch_size
-		mae_ba += torch.mean(torch.abs(transformed_target - src), dim=[0, 1, 2]).item() * batch_size
-
+			mse_ba += torch.mean((transformed_target - src) ** 2, dim=[0, 1, 2]).item() * batch_size
+			mae_ba += torch.mean(torch.abs(transformed_target - src), dim=[0, 1, 2]).item() * batch_size
+		except: # in partial point cloud case
+			mse_ab += 0
+			mae_ab += 0
+			mse_ba += 0
+			mae_ba += 0
 
 		itr+=1  
        
@@ -799,7 +807,6 @@ def main():
 			print("Let's use", torch.cuda.device_count(), "GPUs!")
 	else:
 		raise Exception('Not implemented')
-	
  
 	# training and evaluation
 	if args.eval:
