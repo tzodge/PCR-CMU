@@ -22,7 +22,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.optim.lr_scheduler import MultiStepLR
 from data import ModelNet40
-from data import threedmatch
 from model import DCP
 from util import transform_point_cloud, npmat2euler,error_euler_angles
 import numpy as np
