@@ -218,7 +218,6 @@ def test_one_epoch(args, net, test_loader):
 
 	# computing percentage of incorrect point correspondences
 	incorrect_correspondences =   (1 - total_correct_pred/(num_examples*num_points))*100
-	print ( incorrect_correspondences," percent incorrect testing predictions ")
 
 	rotations_ab = np.concatenate(rotations_ab, axis=0)
 	translations_ab = np.concatenate(translations_ab, axis=0)
@@ -371,9 +370,6 @@ def train_one_epoch(args, net, train_loader, opt):
        
 	# computing percentage of incorrect point correspondences
 	incorrect_correspondences =   (1 - total_correct_pred/(num_examples*num_points))*100
-	print ( incorrect_correspondences," percent incorrect training predictions ")
-	print ( loss_dcp_rot," loss_dcp_rot ")
-	print ( loss_dcp_t," loss_dcp_t ")
 
 
 	rotations_ab = np.concatenate(rotations_ab, axis=0)
