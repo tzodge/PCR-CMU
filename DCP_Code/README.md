@@ -31,7 +31,7 @@ Arguments:
 
 ### Experiment 1.2
 
-`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --loss=cross_entropy_corr --partial=0.3 --cut_plane`
+`python main.py --exp_name=exp1_2 --num_points=512 --factor=1 --loss=cross_entropy_corr --partial=0.3 --cut_plane=True`
 
 ### Experiment 1.3
 
