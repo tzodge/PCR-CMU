@@ -47,12 +47,12 @@ Arguments:
 
 >python train_pcrnet.py --factor 4 --num_points 1024 --pretrained checkpoints/exp_pcrnet_vanilla_1024_4/models/best_model.t7 --exp_name exp_pcrnet_vanilla_1024_4_eval --eval True
 
-### Section 6.3, Experiment 3.1:
+### Section 6.3, Experiment 3.2:
 > python train_pcrnet_corr.py --factor 4 --num_points 100 --pretrained checkpoints/exp_pcrnet_corr_100_4/models/best_model.t7 --exp_name exp_pcrnet_corr_100_4_eval --eval True
 
 >python train_pcrnet.py --factor 4 --num_points 100 --pretrained checkpoints/exp_pcrnet_vanilla_100_4/models/best_model.t7 --exp_name exp_pcrnet_vanilla_100_4_eval --eval True
 
-### Section 6.3, Experiment 3.1:
+### Section 6.3, Experiment 3.3:
 > python train_pcrnet_corr.py --factor 1 --num_points 100 --pretrained checkpoints/exp_pcrnet_corr_100_1/models/best_model.t7 --exp_name exp_pcrnet_corr_100_1_eval --eval True
 
 >python train_pcrnet.py --factor 1 --num_points 100 --pretrained checkpoints/exp_pcrnet_vanilla_100_1/models/best_model.t7 --exp_name exp_pcrnet_vanilla_100_1_eval --eval True
