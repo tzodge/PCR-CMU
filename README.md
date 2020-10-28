@@ -11,7 +11,7 @@ This is the source code repository of the paper "Correspondence Matrices are Und
 | Correspondence Vs Transformation | -->
 
 
-### Methodology
+### Methodology:
 
 <p align="center">
 	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/framework.gif" height="600">
@@ -43,21 +43,21 @@ This is demonstrated by comparing methods (Trained to learn transformation) like
   }
 ```
 
-### Usage
+### Usage:
 
 We demonstrate our approach on three recent network architectures: DCP, PCRNet and RPMNet.
 
 Please refer to the ReadMe sections of the corresponding folders: **DCP_Code**, **PCRNet_Code** and **RPMNet_Code**.
 
-### License
+### License:
 
 This project is release under the MIT License.
 
-### Pretrained Models
+### Pretrained Models:
 
 The pretrained models for all three networks can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing).
 
-### Acknowledgement
+### Acknowledgement:
 
 We would like to thank the authors of [DCP](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf), [PCRNet](https://arxiv.org/abs/2010.09185), [RPM-Net](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf), [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) and [PointNet](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) for making their codes available.
 
