@@ -63,4 +63,4 @@ The pretrained models can be downloaded from [here](https://drive.google.com/dri
 
 We thank RPMNet authors for sharing their code. Their original code can be found at
 
-PCRNet Repository: [https://github.com/yewzijian/RPMNet](https://github.com/yewzijian/RPMNet)
+RPMNet Repository: [https://github.com/yewzijian/RPMNet](https://github.com/yewzijian/RPMNet)
