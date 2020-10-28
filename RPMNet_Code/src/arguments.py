@@ -51,10 +51,10 @@ def rpmnet_arguments():
                         help='Loss aggregation type')
     parser.add_argument('--wt_inliers', type=float, default=1e-2, help='Weight to encourage inliers')
     # Training parameters
-    parser.add_argument('--train_batch_size', default=8, type=int, metavar='N',
-                        help='training mini-batch size (default 8)')
-    parser.add_argument('-b', '--val_batch_size', default=16, type=int, metavar='N',
-                        help='mini-batch size during validation or testing (default: 16)')
+    parser.add_argument('--train_batch_size', default=4, type=int, metavar='N',
+                        help='training mini-batch size (default 4)')
+    parser.add_argument('-b', '--val_batch_size', default=4, type=int, metavar='N',
+                        help='mini-batch size during validation or testing (default: 4)')
     parser.add_argument('--resume', default=None, type=str, metavar='PATH',
                         help='Pretrained network to load from. Optional for train, required for inference.')
     parser.add_argument('--gpu', default=0, type=int, metavar='DEVICE',
@@ -83,7 +83,7 @@ def rpmnet_train_arguments():
                         help='Frequency of evaluation (number of steps if positive, number of epochs if negative).'
                              'Also saves checkpoints at the same interval')
     parser.add_argument('--num_workers', default=32, type=int,
-                        help='Number of workers for data_loader loader (default: 4).')
+                        help='Number of workers for data_loader loader (default: 32).')
     parser.add_argument('--num_train_reg_iter', type=int, default=2,
                         help='Number of outer iterations used for registration (only during training)')
 
