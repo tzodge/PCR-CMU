@@ -4,6 +4,7 @@
 
 This is the source code repository of the paper "Correspondence Matrices are Underrated" accepted at the 8th International Conference on 3D Vision, 2020.
 
+## Citation:
 ```
 @InProceedings{tejas2020cmu,
     author       = "Tejas Zodage, Rahul Chakwate, Vinit Sarode, Rangaprasad Arun Srivatsan and Howie Choset",
@@ -21,13 +22,24 @@ This is the source code repository of the paper "Correspondence Matrices are Und
 | Correspondence Vs Transformation | -->
 
 <p align="center">
-	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/framework.gif" height="500">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/framework.gif" height="600">
 </p>
 
 
 This work is based on our observation that correspondence is more robust parameter for point cloud registration than transformations. 
 We show that an existing deep learning based method which trains the network to learn transformations can converge faster, can register more accurately, and can register partial point clouds if trained to learn correspondence.
 This is demonstrated by comparing methods (Trained to learn transformation) like DCP, PCRNet, and RPMNet with method_corr (Trained to learn correspondence) DCP_corr, PCRNet_corr, and RPMNet_corr respectively.
+
+## Results:
+
+<p align="center">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results1.png" height="200">
+</p>
+
+<p align="center">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results2.png" height="200">
+</p>
+
 
 | DCP Vs DCP_corr | 
 |:--:| 
