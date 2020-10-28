@@ -55,7 +55,7 @@ This project is release under the MIT License.
 
 ### Pretrained Models
 
-The pretrained models for all three networks can be downloaded from here.
+The pretrained models for all three networks can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing).
 
 ### Acknowledgement
 
