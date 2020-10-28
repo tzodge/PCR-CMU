@@ -56,3 +56,13 @@ Arguments:
 > python train_pcrnet_corr.py --factor 1 --num_points 100 --pretrained checkpoints/exp_pcrnet_corr_100_1/models/best_model.t7 --exp_name exp_pcrnet_corr_100_1_eval --eval True
 
 >python train_pcrnet.py --factor 1 --num_points 100 --pretrained checkpoints/exp_pcrnet_vanilla_100_1/models/best_model.t7 --exp_name exp_pcrnet_vanilla_100_1_eval --eval True
+
+### Pretrained Models
+
+The pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing).
+
+### Acknowledgement
+
+We thank PCRNet authors for sharing their code. Their original code can be found at
+
+PCRNet Repository: [https://github.com/vinits5/pcrnet_pytorch](https://github.com/vinits5/pcrnet_pytorch)
