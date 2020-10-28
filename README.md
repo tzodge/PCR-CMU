@@ -1,6 +1,6 @@
 # Correspondence Matrices are Underrated  
 
-[**Paper**](http://biorobotics.ri.cmu.edu/papers/paperUploads/PID6659733.pdf) | [**Supplementary**]() | [**Website**]() | [**Video**]()
+[**Paper**](http://biorobotics.ri.cmu.edu/papers/paperUploads/PID6659733.pdf) | [**Supplementary**]() | [**Project Website**]() | [**Video**]()
 
 This is the source code repository of the paper "Correspondence Matrices are Underrated" accepted at the 8th International Conference on 3D Vision, 2020.
 
@@ -21,7 +21,7 @@ This is the source code repository of the paper "Correspondence Matrices are Und
 | Correspondence Vs Transformation | -->
 
 <p align="center">
-	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/framework.gif" height="300">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/framework.gif" height="250">
 </p>
 
 
