@@ -692,7 +692,7 @@ def main():
 						help='Dimension of embeddings')
 	parser.add_argument('--n_blocks', type=int, default=1, metavar='N',
 						help='Num of blocks of encoder&decoder')
-	parser.add_argument('--n_heads', type=int, default=4, metavar='N',
+	parser.add_argument('--n_heads', type=int, default=16, metavar='N',
 						help='Num of heads in multiheadedattention')
 	parser.add_argument('--ff_dims', type=int, default=1024, metavar='N',
 						help='Num of dimensions of fc in transformer')
@@ -722,7 +722,7 @@ def main():
 						help='Wheter to add gaussian noise')
 	parser.add_argument('--unseen', type=bool, default=False, metavar='N',
 						help='Wheter to test on unseen category')
-	parser.add_argument('--num_points', type=int, default=1024, metavar='N',
+	parser.add_argument('--num_points', type=int, default=512, metavar='N',
 						help='Num of points to use')
 	parser.add_argument('--dataset', type=str, default='modelnet40', choices=['modelnet40','threedmatch'], metavar='N',
 						help='dataset to use')
@@ -732,7 +732,7 @@ def main():
 						help='Pretrained model path')
 	parser.add_argument('--betas', type=float, default=(0.9,0.999), metavar='N', nargs='+',
 						help='Betas for adam')
-	parser.add_argument('--same_pointclouds', type=bool, default=False, metavar='N',
+	parser.add_argument('--same_pointclouds', type=bool, default=True, metavar='N',
 						help='R*src + t should be exactly same as target')
 	parser.add_argument('--debug', type=bool, default=False, metavar='N',
 						help='saves variables in folder variables_storage')
