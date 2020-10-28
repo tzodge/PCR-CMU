@@ -45,10 +45,10 @@ Use `--loss_method=rpmloss` to train with transformation loss as mentioned in th
 `--resume`: Path to the pretrained model to evaluate
 
 ### Experiment 2.1
-`python eval.py --noise_type clean --rot_mag 180 --resume ../pretrained/full_180_corrloss_best.pth`
+`python eval.py --noise_type clean --rot_mag 180 --resume ./<pretrained_path>/full_180_corrloss_best.pth`
 
 ### Experiment 2.2
-`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 180 --resume ../pretrained/partial_180_corrloss_best.pth`
+`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 180 --resume ./<pretrained_path>/partial_180_corrloss_best.pth`
 
 ### Experiment 2.3
-`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --resume ../pretrained/partial_45_corrloss_best.pth`
+`python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --resume ./<pretrained_path>/partial_45_corrloss_best.pth`
