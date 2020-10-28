@@ -44,3 +44,13 @@ To train models with transformation loss, use `--loss=mse_transf` instead.
 `--eval`: Add this argument to the above commands to evaluate a model.
 
 `--model_path`: Path to the pretrained model to be evaluated.
+
+### Pretrained Models
+
+The pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing)
+
+### Acknowledgement
+
+We thank DCP authors for sharing their code. Their original code can be found at
+
+DCP Repository: [https://github.com/WangYueFt/dcp](https://github.com/WangYueFt/dcp)
