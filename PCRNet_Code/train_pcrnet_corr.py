@@ -608,7 +608,7 @@ def main():
                         help='dataset to use')
     parser.add_argument('--factor', type=float, default=4, metavar='N',
                         help='Divided factor for rotations')
-    parser.add_argument('--model_path', type=str, default='', metavar='N',
+    parser.add_argument('--pretrained', type=str, default='', metavar='N',
                         help='Pretrained model path')
 
     args = parser.parse_args()
@@ -638,15 +638,15 @@ def main():
     if args.model == 'pcrnet_corr':
         net = PCRNet_corr(args).cuda()
         if args.eval:
-            if args.model_path is '':
-                model_path = 'checkpoints' + '/' + args.exp_name + '/models/model.best.t7'
+            if args.pretrained is '':
+                pretrained = 'checkpoints' + '/' + args.exp_name + '/models/model.best.t7'
             else:
-                model_path = args.model_path
-                print(model_path)
-            if not os.path.exists(model_path):
+                pretrained = args.pretrained
+                print(pretrained)
+            if not os.path.exists(pretrained):
                 print("can't find pretrained model")
                 return
-            net.load_state_dict(torch.load(model_path), strict=False)
+            net.load_state_dict(torch.load(pretrained), strict=False)
         if torch.cuda.device_count() > 1:
             net = nn.DataParallel(net)
             print("Let's use", torch.cuda.device_count(), "GPUs!")
