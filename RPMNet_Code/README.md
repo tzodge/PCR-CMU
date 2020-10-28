@@ -44,6 +44,8 @@ Use `--loss_method=rpmloss` to train with transformation loss as mentioned in th
 
 `--resume`: Path to the pretrained model to evaluate
 
+`cd src/` - before Evaluation
+
 ### Experiment 2.1
 `python eval.py --noise_type clean --rot_mag 180 --resume ./<pretrained_path>/full_180_corrloss_best.pth`
 
