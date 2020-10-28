@@ -54,3 +54,13 @@ Use `--loss_method=rpmloss` to train with transformation loss as mentioned in th
 
 ### Experiment 2.3
 `python eval.py --noise_type partial_identical --partial 0.7 --rot_mag 45 --resume <pretrained_path>`
+
+### Pretrained Models
+
+The pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing).
+
+### Acknowledgement
+
+We thank RPMNet authors for sharing their code. Their original code can be found at
+
+PCRNet Repository: [https://github.com/yewzijian/RPMNet](https://github.com/yewzijian/RPMNet)
