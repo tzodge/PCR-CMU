@@ -788,7 +788,7 @@ def main():
 				model_path = 'checkpoints' + '/' + args.exp_name + '/models/model.best.t7'
 			else:
 				model_path = args.model_path
-				print(model_path)
+				print("Model loaded from ", model_path)
 			if not os.path.exists(model_path):
 				print("can't find pretrained model")
 				return
