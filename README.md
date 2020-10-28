@@ -25,11 +25,11 @@ This is demonstrated by comparing methods (Trained to learn transformation) like
 ### Results:
 
 <p align="center"
-	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results1.png" height="300">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results1.png" height="250">
 </p>
 
 <p align="center">
-	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results2.png" height="300">
+	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results2.png" height="250">
 </p>
 
 ### Citation:
