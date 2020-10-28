@@ -47,7 +47,7 @@ To train models with transformation loss, use `--loss=mse_transf` instead.
 
 ### Pretrained Models
 
-The pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing)
+The pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1PwFLCNHiL66jL3KySa8msJ_btIvevqW4?usp=sharing).
 
 ### Acknowledgement
 
