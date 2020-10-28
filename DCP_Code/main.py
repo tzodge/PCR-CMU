@@ -722,7 +722,7 @@ def main():
 						help='Wheter to add gaussian noise')
 	parser.add_argument('--unseen', type=bool, default=False, metavar='N',
 						help='Wheter to test on unseen category')
-	parser.add_argument('--num_points', type=int, default=512, metavar='N',
+	parser.add_argument('--num_points', type=int, default=1024, metavar='N',
 						help='Num of points to use')
 	parser.add_argument('--dataset', type=str, default='modelnet40', choices=['modelnet40','threedmatch'], metavar='N',
 						help='dataset to use')
