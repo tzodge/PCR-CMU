@@ -252,7 +252,7 @@ def train(args, model, train_loader, test_loader, boardio, textio, checkpoint):
 					'min_loss': best_test_loss,
 					'optimizer' : optimizer.state_dict(),}
 			torch.save(snap, 'checkpoints/%s/models/best_model_snap.t7' % (args.exp_name))
-			torch.save(model.state_dict(), 'checkpoints/%s/models/best_model.t7' % (args.exp_name))
+			torch.save(model.state_dict(), 'checkpoints/%s/models/model.best.t7' % (args.exp_name))
 			torch.save(model.feature_model.state_dict(), 'checkpoints/%s/models/best_ptnet_model.t7' % (args.exp_name))
 
 		torch.save(snap, 'checkpoints/%s/models/model_snap.t7' % (args.exp_name))
