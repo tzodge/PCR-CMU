@@ -25,7 +25,7 @@ We show that an existing deep learning based method which trains the network to 
 This is demonstrated by comparing methods (Trained to learn transformation) like DCP, PCRNet, and RPMNet with method_corr (Trained to learn correspondence) DCP_corr, PCRNet_corr, and RPMNet_corr respectively.
 
 ### Results:
-
+<!--
 <p align="center">
 	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results1.png" height="300">
 </p>
@@ -33,7 +33,7 @@ This is demonstrated by comparing methods (Trained to learn transformation) like
 <p align="center">
 	<img src="https://github.com/tzodge/PCR-CMU/blob/main/images/results2.png" height="300">
 </p>
-
+ -->
 ### Citation:
 ```
 @InProceedings{tejas2020cmu,
