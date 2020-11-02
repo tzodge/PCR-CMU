@@ -23,6 +23,17 @@ Source Code Authors: [Tejas Zodage](https://github.com/tzodge), [Rahul Chakwate]
 This work is based on our observation that correspondence is more robust parameter for point cloud registration than transformations. 
 We show that an existing deep learning based method which trains the network to learn transformations can converge faster, can register more accurately, and can register partial point clouds if trained to learn correspondence.
 This is demonstrated by comparing methods (Trained to learn transformation) like DCP, PCRNet, and RPMNet with method_corr (Trained to learn correspondence) DCP_corr, PCRNet_corr, and RPMNet_corr respectively.
+
+See the following link for a video demonstration of the method:
+
+<p align="center">
+<a href="https://youtu.be/wCy_GDfX2CA">
+    <img src="images/video_cover.png" height="300">
+</a>
+</p>
+
+
+
 <!--
 ### Results:
 
