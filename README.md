@@ -1,6 +1,6 @@
 # Correspondence Matrices are Underrated (CMU) 
 
-[**Paper**](http://biorobotics.ri.cmu.edu/papers/paperUploads/PID6659733.pdf) | [**Supplementary**]() | [**Project Website**]() | [**Video**](https://youtu.be/wCy_GDfX2CA)
+[**Paper**](https://arxiv.org/pdf/2010.16085.pdf) | [**Arxiv**](https://arxiv.org/abs/2010.16085) | [**Video**](https://youtu.be/wCy_GDfX2CA)
 
 This is the source code repository of the paper "Correspondence Matrices are Underrated" accepted at the 8th International Conference on 3D Vision, 2020.
 
