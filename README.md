@@ -1,4 +1,4 @@
-# Correspondence Matrices are Underrated  
+# Correspondence Matrices are Underrated (CMU) 
 
 [**Paper**](http://biorobotics.ri.cmu.edu/papers/paperUploads/PID6659733.pdf) | [**Supplementary**]() | [**Project Website**]() | [**Video**](https://youtu.be/wCy_GDfX2CA)
 
